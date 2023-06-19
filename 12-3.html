@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var count = 0;
+            var image = document.getElementById('image');
+            var frames = [
+                'run1.png', 'run2.png', 'run3.png', 'run4.png',
+                'run5.png', 'run6.png', 'run7.png', 'run8.png'
+            ];
+            setInterval(function() {
+                image.src = "imgs/" + frames[count % frames.length];
+                count = count + 1;
+            }, 1000 / frames.length);
+        };
+    </script>
+</head>
+<body>
+    <img id="image">
+</body>
+</html>
